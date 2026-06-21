@@ -56,8 +56,11 @@ function getCategories(items) {
  * @returns {string[]} SKUs of given items
  */
 function getSkus(items) {
-  // TODO
+  return items.map((item) => {
+    return `${item.id}#${item.name}#${item.name.length}`;
+  }); 
 }
+//console.log(getSkus(INVENTORY));
 
 /**
  * @param {Item[]} items
