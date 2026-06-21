@@ -27,8 +27,12 @@ const INVENTORY = [
  * @returns {number[]} ids of given items
  */
 function getIds(items) {
-  // TODO
+  return items.map((item) => {
+    return item.id;
+});
 }
+
+//console.log(getIds(INVENTORY));
 
 /**
  * @param {Item[]} items
