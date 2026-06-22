@@ -95,15 +95,19 @@ function getCheapItems(items) {
   });
 }
 
-console.log(getCheapItems(INVENTORY));
+//console.log(getCheapItems(INVENTORY));
 
 /**
  * @param {Item[]} items
  * @returns {number} the total quantity of all items given
  */
 function countItems(items) {
-  // TODO
+  return items.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
 }
+
+console.log(countItems(INVENTORY));
 
 /**
  * @param {Item[]} items
