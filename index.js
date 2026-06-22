@@ -89,8 +89,13 @@ function getItemsByCategory(items, category) {
  * @returns {Item[]} all cheap items
  */
 function getCheapItems(items) {
-  // TODO
+    return items.filter((item) => {
+      // console.log(item.name, item.price);
+    return item.price <= 2.5;
+  });
 }
+
+console.log(getCheapItems(INVENTORY));
 
 /**
  * @param {Item[]} items
