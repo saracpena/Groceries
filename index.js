@@ -119,12 +119,19 @@ function getTotalCost(items) {
   }, 0);
 }
 
-console.log(getTotalCost(INVENTORY));
+// console.log(getTotalCost(INVENTORY));
 
 /**
  * @param {Item[]} items
  * @returns {Item} the item with the highest price
  */
 function getMostExpensiveItem(items) {
-  // TODO
+  return items.reduce((mostExpensive, item) => {
+    if (item.price > mostExpensive.price) {
+      return item;
+    }
+    return mostExpensive;
+  });
 }
+
+console.log(getMostExpensiveItem(INVENTORY));
